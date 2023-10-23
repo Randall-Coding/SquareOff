@@ -1,0 +1,10 @@
+containers: {
+ web: {
+  image: "ghcr.io/randall-coding/squareoff:latest"
+  ports: publish: "8080/http"
+  env: {
+    HOST: "@{services.web.endpoint}"
+    ENV: "prod"
+  }
+ }
+}
